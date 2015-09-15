@@ -30,7 +30,19 @@ def depth_limited_search(problem, limit):
     # [Problem 1 - C]
     # implement DEPTH-LIMITED-SEARCH algorithm
     # return a solution(an instance of list), 'cutoff'(an instance of str) or 'failure'(an instance of str)
-    pass
+    return recursive_dls(Node(problem.initial_state), problem, limit)
+
+def recursive_dls(node, problem, limit):
+    cutoff_occured = False
+    if problem.goal_test(node.state): return node.solution()
+    elif node.depth == limit: return 'cutoff'
+    else:
+        for successor in problem.expand(node):
+            result = recursive_dls(successor, problem, limit)
+            if result == 'cutoff': cutoff_occured = True
+            elif result != 'failure': return result
+    if cutoff_occured: return 'cutoff'
+    else: return 'failure'
 
 def iterative_deepening_search(problem):
     # [Problem 1 - D]
