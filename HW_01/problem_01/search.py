@@ -48,4 +48,8 @@ def iterative_deepening_search(problem):
     # [Problem 1 - D]
     # implement ITERATIVE-DEEPENING-SEARCH algorithm
     # return a solution(an instance of list), 'cutoff'(an instance of str) or 'failure'(an instance of str)
-    pass
+    depth = 0
+    while True:
+        result = depth_limited_search(problem, depth)
+        if result != "cutoff": return result
+        depth += 1
