@@ -10,7 +10,18 @@ def calculate_manhattan_distance(location1, location2):
 def calculate_total_manhattan_distance(state1, state2):
     # [Problem 2 - B]
     # calculate and return a total Manhattan distance between state1 and state2
-    pass
+    def find(tiles, value):
+        for i in range(3):
+            for j in range(3):
+                if tiles[i][j] == value:
+                    return (i, j)
+    sum = 0
+    for i in range(3):
+        for j in range(3):
+            loc2 = find(state2.tiles, state1.tiles[i][j])
+            sum += calculate_manhattan_distance((i,j), loc2)
+
+    return sum
 
 # [Problem 2 - C]
 class GreedyBestFirstSearchFringe(object): # a fringe for the greedy best-first search
