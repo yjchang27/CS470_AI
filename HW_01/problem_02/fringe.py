@@ -1,6 +1,6 @@
 # coding: utf-8
 
-import collections
+import collections, heapq
 
 def calculate_manhattan_distance(location1, location2):
     # [Problem 2 - A]
@@ -30,37 +30,39 @@ class GreedyBestFirstSearchFringe(object): # a fringe for the greedy best-first 
             elements = []
 
         # store the goal_state to calculate heuristic values
-        pass
+        self.goal_state = goal_state
         # initialize a queue with the given elements
-        pass
+        self.elements = []
+        self.insert_all(elements)
 
     def is_empty(self):
         # return true only if there are no more elements in the queue
-        pass
+        return len(self.elements) == 0
 
     def front(self):
         # return the first element of this queue
-        pass
+        return self.elements[0][1]
 
     def remove_front(self):
         # return self.front() and remove it from the queue
         # HINT: you can use the heapq library in python
         # https://docs.python.org/2/library/heapq.html
-        pass
+        return heapq.heappop(self.elements)[1]
 
     def insert(self, element):
         # insert an element into the queue (consider a type of queue you will use for this fringe)
-        pass
+        heapq.heappush(self.elements, (self.heuristic_function(element), element))
 
     def insert_all(self, elements):
         # insert a set of elements into the queue
-        pass
+        for element in elements:
+            self.insert(element)
 
     def heuristic_function(self, node):
         # calculate and return a heuristic value of the node
         # use the calculate_total_manhattan_distance function as a heuristic function
         # HINT: use this function as a priority of an element(an instance of Node)
-        pass
+        return calculate_total_manhattan_distance(self.goal_state, node.state)
 
 # [Problem 2 - D]
 class AStarSearchFringe(object): # a fringe for the a-star search
