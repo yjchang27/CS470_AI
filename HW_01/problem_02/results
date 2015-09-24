@@ -1,12 +1,12 @@
 # Test 1
 ## Greedy best-first search
-- execution time: 0.0003480911s
+- execution time: 0.0002379417s
 - number of generated nodes: 8
 - max depth: 2
 - action sequence: ['down', 'down']
 
 ## A-star search
-- execution time: 0.0002379417s
+- execution time: 0.0002028942s
 - number of generated nodes: 8
 - max depth: 2
 - action sequence: ['down', 'down']
@@ -14,13 +14,13 @@
 
 # Test 2
 ## Greedy best-first search
-- execution time: 0.0003621578s
+- execution time: 0.0003221035s
 - number of generated nodes: 13
 - max depth: 4
 - action sequence: ['down', 'left', 'down', 'right']
 
 ## A-star search
-- execution time: 0.0003271103s
+- execution time: 0.0003800392s
 - number of generated nodes: 13
 - max depth: 4
 - action sequence: ['down', 'left', 'down', 'right']
@@ -28,25 +28,28 @@
 
 # Test 3
 ## Greedy best-first search
-- execution time: 0.0019981861s
-- number of generated nodes: 74
+- execution time: 0.0013549328s
+- number of generated nodes: 37
 - max depth: 12
 - action sequence: ['up', 'up', 'right', 'down', 'left', 'up', 'right', 'right', 'down', 'left', 'up', 'left']
 
 ## A-star search
-- execution time: 0.0115549564s
-- number of generated nodes: 391
+- execution time: 0.0107250214s
+- number of generated nodes: 284
 - max depth: 12
 - action sequence: ['up', 'up', 'right', 'down', 'left', 'up', 'right', 'right', 'down', 'left', 'up', 'left']
 
 
 # Test 4
 ## Greedy best-first search
-- exceeds the allowed max depth
+- execution time: 0.0010631084s
+- number of generated nodes: 30
+- max depth: 10
+- action sequence: ['left', 'left', 'up', 'right', 'up', 'left', 'down', 'right', 'down', 'left']
 
 ## A-star search
-- execution time: 0.0012350082s
-- number of generated nodes: 48
+- execution time: 0.0011670589s
+- number of generated nodes: 35
 - max depth: 10
 - action sequence: ['left', 'left', 'up', 'right', 'up', 'left', 'down', 'right', 'down', 'left']
 
@@ -56,8 +59,8 @@
 - exceeds the allowed max depth
 
 ## A-star search
-- execution time: 0.0060949326s
-- number of generated nodes: 235
+- execution time: 0.0021739006s
+- number of generated nodes: 66
 - max depth: 8
 - action sequence: ['right', 'down', 'right', 'up', 'left', 'left', 'down', 'down']
 

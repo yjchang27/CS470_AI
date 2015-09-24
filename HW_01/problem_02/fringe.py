@@ -18,8 +18,10 @@ def calculate_total_manhattan_distance(state1, state2):
     sum = 0
     for i in range(3):
         for j in range(3):
-            loc2 = find(state2.tiles, state1.tiles[i][j])
-            sum += calculate_manhattan_distance((i,j), loc2)
+            value = state1.tiles[i][j]
+            if value != 0:
+                loc2 = find(state2.tiles, value)
+                sum += calculate_manhattan_distance((i,j), loc2)
 
     return sum
 
