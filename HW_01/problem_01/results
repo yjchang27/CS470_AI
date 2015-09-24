@@ -1,0 +1,118 @@
+# Test 1
+## Depth-first search
+- execution time: 0.0000650883s
+- number of generated nodes: 8
+- max depth: 2
+- action sequence: ['down', 'down']
+
+## Breadth-first search
+- execution time: 0.0001759529s
+- number of generated nodes: 33
+- max depth: 3
+- action sequence: ['down', 'down']
+
+## Depth-limited search
+- execution time: 0.0002300739s
+- number of generated nodes: 38
+- max depth: 5
+- action sequence: ['left', 'right', 'down', 'down']
+
+## Iterative deepening search
+- execution time: 0.0000929832s
+- number of generated nodes: 15
+- max depth: 2
+- action sequence: ['down', 'down']
+
+
+# Test 2
+## Depth-first search
+- exceeds the allowed max depth
+
+## Breadth-first search
+- execution time: 0.0016870499s
+- number of generated nodes: 163
+- max depth: 5
+- action sequence: ['down', 'left', 'down', 'right']
+
+## Depth-limited search
+- execution time: 0.0008821487s
+- number of generated nodes: 147
+- max depth: 5
+- action sequence: ['down', 'left', 'down', 'right']
+
+## Iterative deepening search
+- execution time: 0.0005459785s
+- number of generated nodes: 91
+- max depth: 4
+- action sequence: ['down', 'left', 'down', 'right']
+
+
+# Test 3
+## Depth-first search
+- exceeds the allowed max depth
+
+## Breadth-first search
+- execution time: 8.7417120934s
+- number of generated nodes: 632601
+- max depth: 13
+- action sequence: ['up', 'right', 'up', 'left', 'down', 'right', 'up', 'right', 'down', 'left', 'up', 'left']
+
+## Depth-limited search
+- execution time: 0.0015358925s
+- number of generated nodes: 201
+- max depth: 5
+- action sequence: cutoff
+
+## Iterative deepening search
+- execution time: 2.3080539703s
+- number of generated nodes: 350794
+- max depth: 12
+- action sequence: ['up', 'right', 'up', 'left', 'down', 'right', 'up', 'right', 'down', 'left', 'up', 'left']
+
+
+# Test 4
+## Depth-first search
+- exceeds the allowed max depth
+
+## Breadth-first search
+- execution time: 0.3102099895s
+- number of generated nodes: 42657
+- max depth: 11
+- action sequence: ['left', 'left', 'up', 'right', 'up', 'left', 'down', 'right', 'down', 'left']
+
+## Depth-limited search
+- execution time: 0.0022420883s
+- number of generated nodes: 201
+- max depth: 5
+- action sequence: cutoff
+
+## Iterative deepening search
+- execution time: 0.1494460106s
+- number of generated nodes: 23045
+- max depth: 10
+- action sequence: ['left', 'left', 'up', 'right', 'up', 'left', 'down', 'right', 'down', 'left']
+
+
+# Test 5
+## Depth-first search
+- exceeds the allowed max depth
+
+## Breadth-first search
+- execution time: 0.0496141911s
+- number of generated nodes: 7511
+- max depth: 9
+- action sequence: ['right', 'down', 'right', 'up', 'left', 'left', 'down', 'down']
+
+## Depth-limited search
+- execution time: 0.0012300014s
+- number of generated nodes: 201
+- max depth: 5
+- action sequence: cutoff
+
+## Iterative deepening search
+- execution time: 0.0276720524s
+- number of generated nodes: 4127
+- max depth: 8
+- action sequence: ['right', 'down', 'right', 'up', 'left', 'left', 'down', 'down']
+
+
