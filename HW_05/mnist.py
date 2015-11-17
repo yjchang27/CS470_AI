@@ -29,21 +29,40 @@ def sigmoid(x):
     # a sigmoid of x
 
     # [4.A] FILL YOUR CODE HERE
-    pass
+    from scipy.special import expit
+    return expit(x)
+
 
 def propagate(x):
     # propagate an input x to the output layer
 
     # [4.B] FILL YOUR CODE HERE
-    pass
+    # input activations
+    layers[0] = x
+    # hidden activations
+    layers[1] = sigmoid(layers[0].dot(weights[0]))
+    # output activations
+    layers[2] = sigmoid(layers[1].dot(weights[1]))
 
     return layers[2]
+
 
 def backpropagate(y_true, learning_rate):
     # backpropagate an error from the output layer and update weights
 
     # [4.C] FILL YOUR CODE HERE
-    pass
+    # the given y is already sigmoided
+    sigmoid_grad = lambda y: y * (1.0 - y)
+    # calculate errors for output layer
+    errors = -(y_true - layers[2])
+    output_deltas = sigmoid_grad(layers[2]) * errors
+    # calculate errors for hidden layer
+    errors = output_deltas.dot(weights[1].transpose())
+    hidden_deltas = sigmoid_grad(layers[1]) * errors
+    # update the weights connecting hidden to output
+    weights[1] -= learning_rate * layers[1].transpose().dot(output_deltas)
+    # update the weights connecting input to hidden
+    weights[0] -= learning_rate * layers[0].transpose().dot(hidden_deltas)
 
 
 # EVALUATION - DO NOT MODIFY THIS FUNCTION!
