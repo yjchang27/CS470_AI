@@ -7,7 +7,7 @@ np.random.seed(1) # DO NOT MODIFY THIS LINE!
 # NEURAL NETWORK CONFIGURATION
 size_of_layers = [
     28 * 28, # a size of the input layer (MNIST digit data consist of 28x28 pixels)
-    50, # [4.E] a size of the hidden layer
+    85, # [4.E] a size of the hidden layer
     10, # a size of the output layer
 ]
 
@@ -22,7 +22,7 @@ weights = [
     (2 * np.random.random((size_of_layers[1], size_of_layers[2]))) - 1, # weights between the hidden layer and the output layer
 ]
 
-learning_rate = 0.1 # [4.E] a learning rate
+learning_rate = 1.14 # [4.E] a learning rate
 
 
 def sigmoid(x):
